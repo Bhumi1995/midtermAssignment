@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Lobster&family=Pacifico&family=Poppins:wght@100;200;300;400;500&family=Satisfy&family=Unkempt:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+/* header style */
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #030201;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.hero {
+  position: relative;
+  top: 80px;
+}
+
+.logo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #030201;
+}
+
+.navbar {
+  position: relative;
+  right: -25px;
+  top: 208px;
+  background-color: #fff;
+  visibility: hidden;
+  transform: translateX(105%);
+  transition: transform 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+li {
+  width: 255px;
+  height: 56px;
+  text-align: center;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.nav-list li a {
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  color: #030201;
+  font-size: 14px;
+}
+.header-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 60px;
+  font-size: 20px;
+}
+
+.hamburger-icon {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+.icon1 {
+  visibility: hidden;
+  margin-right: 2px;
+}
+
+.icon2 {
+  position: absolute;
+  right: 3px;
+  bottom: -3px;
+  font-size: 25px;
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.header-icon .icon {
+  margin: 6px 3px;
+
+  cursor: pointer;
+}
+
+/* hero section style */
+
+.hero-img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.hero-img img {
+  max-width: 100%;
+  height: 350px;
+}
+
+.background2 {
+  transform: scaleX(-1);
+}
+.hero-text {
+  position: absolute;
+  top: 135px;
+  left: 150px;
+  color: #fff;
+  text-align: end;
+}
+
+.hero-btn {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #030201;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: capitalize;
+  cursor: pointer;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.hero-btn:hover {
+  background-color: antiquewhite;
+}
+
+.big-text {
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.small-text {
+  font-size: 15px;
+  font-family: "Satisfy", cursive;
+}
+
+/* menu section style */
+
+#menu {
+  margin: 3rem 0;
+  position: relative;
+  top: 80px;
+}
+
+.menu-special {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 35px;
+  font-family: "Satisfy", cursive;
+}
+
+.menu-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 10px;
+}
+
+.menu-heading {
+  width: 100%;
+  font-size: 20px;
+}
+
+.menu-card {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 0.5rem;
+  transition: all 1.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-card:hover {
+  transform: scale(1.1);
+}
+
+.menu-img {
+  min-width: 50%;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.menu-text {
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-heading .menu-title {
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.menu-desc {
+  font-size: 10px;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.menu-price {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.menu-price2 {
+  font-size: 10px;
+  font-weight: 400;
+  position: relative;
+  bottom: 2px;
+  left: 5px;
+  text-decoration: line-through;
+}
+
+.menu-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #030201;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background-color: #2b1806;
+}
+
+/* footer style */
+
+footer {
+  text-align: center;
+  background-color: #030201;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 10px;
+  position: relative;
+  top: 80px;
+}
+
+/* media query for ipad */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    font-size: 35px;
+  }
+
+  .header-icon .icon {
+    font-size: 25px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .big-text {
+    font-size: 30px;
+  }
+
+  .hero-btn {
+    font-size: 17px;
+  }
+
+  .small-text {
+    font-size: 25px;
+  }
+
+  .hero-text {
+    top: 125px;
+    left: 345px;
+  }
+
+  li {
+    width: 500px;
+  }
+
+  .header-icon {
+    right: -5px;
+  }
+
+  .navbar {
+    right: -112px;
+    justify-content: baseline;
+  }
+  .icon1 {
+    font-size: 25px;
+  }
+
+  .icon2 {
+    font-size: 30px;
+  }
+
+  .menu-special {
+    font-size: 35px;
+  }
+
+  .menu-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+
+  .menu-list {
+    flex-direction: row;
+  }
+
+  .menu-text {
+    text-align: left;
+  }
+
+  .menu-heading .menu-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .menu-img {
+    width: 50%;
+  }
+
+  .menu-desc {
+    font-size: 8px;
+  }
+  .menu-price {
+    margin-bottom: -2px;
+  }
+
+  .menu-btn {
+    font-size: 12px;
+  }
+}
+
+/* media query for desktop */
+
+@media only screen and (min-width: 1025px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 15%;
+
+    font-size: 35px;
+  }
+  .navbar {
+    width: 50%;
+    top: 0px;
+    right: 0;
+    transform: none;
+    transition: none;
+  }
+
+  .nav-list li a {
+    top: 14px;
+    right: 0;
+  }
+  li {
+    width: 100px;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .nav-list li a {
+    font-size: 16px;
+    color: #3d2003;
+  }
+  .nav-list li a:hover {
+    color: cadetblue;
+  }
+  .hero-img img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .icon1,
+  .icon2 {
+    visibility: hidden;
+  }
+  .nav-list {
+    visibility: visible;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header-icon {
+    right: 0px;
+  }
+
+  .hero-text {
+    padding: 10px;
+    top: 250px;
+    left: 750px;
+  }
+
+  .big-text {
+    font-size: 50px;
+  }
+
+  .small-text {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .hero-btn {
+    font-size: 20px;
+  }
+  .menu-list {
+    flex-direction: row;
+  }
+
+  .menu-text {
+    text-align: left;
+  }
+
+  .menu-special {
+    font-size: 45px;
+  }
+
+  .menu-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .menu-card {
+    width: 90%;
+  }
+
+  .menu-heading .menu-title {
+    font-size: 20px;
+  }
+
+  .menu-desc {
+    font-size: 10px;
+  }
+
+  .menu-price {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .menu-btn {
+    font-size: 14px;
+  }
+}
+
+/* key frames style */
+@keyframes myAnim {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}

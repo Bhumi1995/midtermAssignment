@@ -1,0 +1,112 @@
+.gallery-title {
+  text-align: center;
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 300;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Satisfy", cursive;
+}
+.gallery {
+  margin-top: 7rem;
+}
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 2rem 0;
+  place-items: center;
+  padding: 10px;
+}
+div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #000;
+  text-align: center;
+  box-shadow: 0 0 5px (rgba 0, 0, 0, 0.15);
+}
+div.item * {
+  box-sizing: border-box;
+}
+div.item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 300px;
+  cursor: pointer;
+}
+div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffc125;
+}
+div.item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+div.item.red {
+  background-color: #e74c3c;
+}
+div.item.red i {
+  color: #e74c3c;
+}
+
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+div.item * {
+  transition: all 0.5s ease-in-out;
+}
+
+div.item i {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+div.item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* media query for ipad */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .gallery-wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0;
+    place-items: center;
+  }
+  .gallery-title {
+    font-size: 35px;
+  }
+}
+
+/* media query for desktop */
+
+@media only screen and (min-width: 1025px) {
+  .gallery-wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+  }
+
+  .gallery-title {
+    font-size: 45px;
+  }
+}
